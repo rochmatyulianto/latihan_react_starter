@@ -4,10 +4,15 @@
 
 :root {
   --main-red-color: #e06262;
+  --main-black-color: #484848;
 }
 
 .main-red-color {
   color: var(--main-red-color);
+}
+
+.main-black-color {
+  color: var(--main-black-color);
 }
 
 html {
@@ -29,7 +34,8 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .container {
@@ -41,10 +47,11 @@ html {
 }
 
 .frame {
-  border: 1px solid #484848;
+  border: 1px solid var(--main-black-color);
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
@@ -55,7 +62,8 @@ html {
 .header-tittle {
   flex: 1;
   text-align: center;
-  font-size: 3,6rem;
+  color: var(--main-black-color);
+  font-size: 3, 6rem;
   font-family: "homemade apple", sans-serif;
   text-transform: lowercase;
 }
@@ -71,40 +79,42 @@ html {
   outline: unset;
 }
 
-.add{
-  padding: 16px;
-
+.header-btn.main-red-color:active {
+  text-shadow: 1px 1px 2px var(--main-red-color);
 }
 
-.add-form{
+.header-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
 
+.add {
+  padding: 16px;
+}
+
+.add-form {
   display: flex;
   align-items: flex-start;
-
 }
 
-.add-input{
-background: unset;
-border: unset;
-padding: 0 64px;
+.add-input {
+  background: unset;
+  border: unset;
+  padding: 0 64px;
 
-flex: 1;
+  flex: 1;
 
-border-bottom: 1px solid var(--main-red-color)
+  border-bottom: 1px solid var(--main-red-color);
 
-outline: unset;
+  outline: unset;
 
-font-family: "homemade apple",sans-serif;
-font-size: 16px;
-text-transform: lowercase;
-
-
+  font-family: "homemade apple", sans-serif;
+  font-size: 16px;
+  text-transform: lowercase;
 }
 
-.add-btn{
-
+.add-btn {
   font-size: 1.8rem;
-  font-family: "bungee",sans-serif;
+  font-family: "bungee", sans-serif;
 
   padding: 16px;
   padding-right: unset;
@@ -113,6 +123,27 @@ text-transform: lowercase;
   background: unset;
   border: unset;
   outline: unset;
+}
+.add-btn.main-black-color:active {
+  text-shadow: 1px 1px 2px var(--main-black-color);
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+.todo {
+  position: relative;
+  flex: 1 0 auto;
+  text-align: center;
 
-
+  min-height: 34px;
+  margin: 16px 0 0;
+  font-family: "homemade apple", sans-serif;
+  font-size: 24px;
+  border-bottom: 1px solid var(--main-red-color);
+}
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
